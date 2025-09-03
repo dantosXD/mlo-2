@@ -1,0 +1,21 @@
+{
+  "name": "mlo-2",
+  "private": true,
+  "workspaces": [
+    "apps/app1",
+    "apps/app2"
+  ],
+  "scripts": {
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "format": "prettier . --check",
+    "format:fix": "prettier . --write",
+    "test": "npm run test -w apps/app1 && npm run test -w apps/app2",
+    "build": "npm run build -w apps/app1 && npm run build -w apps/app2"
+  },
+  "devDependencies": {
+    "eslint": "^8.57.0",
+    "prettier": "^3.2.5",
+    "vitest": "^1.6.1"
+  }
+}
