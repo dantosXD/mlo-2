@@ -1,0 +1,39 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: mlo-2
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: mlo-2
+  template:
+    metadata:
+      labels:
+        app: mlo-2
+    spec:
+      containers:
+        - name: mlo-2
+          image: myregistry/mlo-2:latest
+          ports:
+            - containerPort: 3000
+          env:
+            - name: LOG_LEVEL
+              value: info
+            - name: SECRET_TOKEN
+              valueFrom:
+                secretKeyRef:
+                  name: mlo-2-secrets
+                  key: secretToken
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: mlo-2
+spec:
+  selector:
+    app: mlo-2
+  ports:
+    - port: 80
+      targetPort: 3000
+  type: ClusterIP

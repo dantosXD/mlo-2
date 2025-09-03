@@ -1,0 +1,13 @@
+{
+  "serviceName": "mlo-2",
+  "taskDefinition": "mlo-2",
+  "desiredCount": 1,
+  "launchType": "FARGATE",
+  "networkConfiguration": {
+    "awsvpcConfiguration": {
+      "assignPublicIp": "ENABLED",
+      "subnets": ["subnet-12345678"],
+      "securityGroups": ["sg-12345678"]
+    }
+  }
+}
