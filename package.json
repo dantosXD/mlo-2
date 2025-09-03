@@ -1,0 +1,8 @@
+{
+  "name": "mlo-2",
+  "private": true,
+  "workspaces": ["apps/backend", "apps/frontend"],
+  "scripts": {
+    "test": "npm --workspace apps/backend test && npm --workspace apps/frontend test"
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "name": "frontend",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "test": "echo 'No frontend tests'"
+  },
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "@apollo/client": "^3.7.0",
+    "graphql": "^16.6.0"
+  }
+}
