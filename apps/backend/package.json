@@ -1,0 +1,14 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "type": "module",
+  "main": "src/ws/server.ts",
+  "scripts": {
+    "start": "node --loader ts-node/esm src/ws/server.ts",
+    "test": "echo 'No backend tests'"
+  },
+  "dependencies": {
+    "ws": "^8.13.0",
+    "ts-node": "^10.9.1"
+  }
+}
