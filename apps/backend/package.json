@@ -1,0 +1,12 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "test": "echo 'No backend tests'"
+  },
+  "dependencies": {
+    "graphql": "^16.6.0",
+    "graphql-yoga": "^2.15.2"
+  }
+}
