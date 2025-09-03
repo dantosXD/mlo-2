@@ -1,0 +1,14 @@
+CREATE TABLE applications (
+  id INTEGER PRIMARY KEY AUTOINCREMENT,
+  applicant_name TEXT NOT NULL,
+  created_at DATETIME DEFAULT CURRENT_TIMESTAMP
+);
+
+CREATE TABLE pipeline_stages (
+  id INTEGER PRIMARY KEY AUTOINCREMENT,
+  application_id INTEGER NOT NULL,
+  stage TEXT NOT NULL,
+  entered_at DATETIME DEFAULT CURRENT_TIMESTAMP,
+  exited_at DATETIME,
+  FOREIGN KEY (application_id) REFERENCES applications(id)
+);

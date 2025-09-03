@@ -1,0 +1,9 @@
+{
+  "name": "backend",
+  "private": true,
+  "main": "src/server.js",
+  "dependencies": {
+    "apollo-server": "^3.12.0",
+    "graphql": "^16.8.0"
+  }
+}
