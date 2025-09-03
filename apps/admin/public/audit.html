@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Audit Trail</title>
+</head>
+<body>
+  <h1>Audit Trail</h1>
+  <ul id="logs"></ul>
+  <script>
+    fetch('/api/audit').then(r => r.json()).then(data => {
+      const list = document.getElementById('logs');
+      data.forEach(log => {
+        const li = document.createElement('li');
+        li.textContent = `${log.created_at} - ${log.user_id} - ${log.action}`;
+        list.appendChild(li);
+      });
+    });
+  </script>
+</body>
+</html>

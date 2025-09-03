@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Compliance Status</title>
+</head>
+<body>
+  <h1>Compliance Status Dashboard</h1>
+  <div id="status"></div>
+  <script>
+    fetch('/api/compliance/status').then(r => r.json()).then(data => {
+      document.getElementById('status').innerText = JSON.stringify(data, null, 2);
+    });
+  </script>
+</body>
+</html>
