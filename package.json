@@ -1,0 +1,7 @@
+{
+  "name": "mlo-2",
+  "private": true,
+  "scripts": {
+    "test": "echo 'No tests'"
+  }
+}
